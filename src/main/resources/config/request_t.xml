@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<interface xmlns="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.chinatax.gov.cn/tirip/dataspec/interfaces.xsd"
+	version="DZFP1.0">
+	<globalInfo>
+		<terminalCode>0</terminalCode>
+           <!-- 		ZZS_PT_DZFP 增-->
+		<appId>ZZS_PT_DZFP	</appId>
+		<version>2.0</version>
+		<!-- 下载 -->
+	    <!--  <interfaceCode>ECXML.FPXZ.CX.E_INV</interfaceCode>  -->
+	     
+	     <!-- 开票 -->
+	    <!--  <interfaceCode>ECXML.FPKJ.BC.E_INV</interfaceCode> -->
+	   <interfaceCode>${interfaceCode!}</interfaceCode> 
+	   
+	   <!-- 库存查询 -->
+	    <!-- <interfaceCode>ECXML.FPCX.KC.E_INV</interfaceCode> -->
+	     <!--  平台编码    -->
+		<userName>${userName!}</userName>
+		<passWord>${passWord!}</passWord>
+		<!-- 开票换成此税号  440301999999980 -->
+		<taxpayerId>${taxpayerId!}</taxpayerId>
+		
+		<!-- 查询要换成此税号 -->
+	    <!-- <taxpayerId>440300349724458</taxpayerId> -->
+		<authorizationCode>${authorizationCode!}</authorizationCode>
+		 <!--  用平台编码    -->
+		<requestCode>${requestCode!}</requestCode>
+		<requestTime>${requestTime!}</requestTime>
+		<responseCode>${responseCode!}</responseCode>
+<!-- 		P0000001ECXML.FPKJ.BC.E_INV000000001 -->
+		<dataExchangeId>${dataExchangeId!}</dataExchangeId>
+	</globalInfo>
+	<returnStateInfo>
+		<returnCode></returnCode>
+		<returnMessage></returnMessage>
+	</returnStateInfo>
+	<Data>
+		<dataDescription>
+			<zipCode>0</zipCode>
+			<encryptCode>2</encryptCode>
+			<codeType>CA</codeType>
+		</dataDescription>
+		<content>${content!}</content>
+	</Data>
+</interface>

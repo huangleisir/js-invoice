@@ -1,0 +1,83 @@
+<REQUEST_FPKJXX >
+  <FPKJXX_FPTXX class="FPKJXX_FPTXX">
+    <FPQQLSH>${fpqqlsh!}</FPQQLSH>
+    <DSPTBM>${dsptbm!}</DSPTBM>
+    <NSRSBH>${nsrsbh!}</NSRSBH>
+    <NSRMC>${nsrmc!}</NSRMC>
+    <NSRDZDAH/>
+    <SWJG_DM/>
+    <DKBZ>0</DKBZ>
+	<PYDM>000001</PYDM>
+    <KPXM>${kpxm!}</KPXM>
+    <BMB_BBH>12.0</BMB_BBH>
+    <XHF_NSRSBH>${xhfnsrsbh!}</XHF_NSRSBH>
+    <XHFMC>${xhfmc!}</XHFMC>  
+    <XHF_DZ>${xhfdz!}</XHF_DZ>
+    <XHF_DH>${xhfdh!}</XHF_DH>
+    <XHF_YHZH>${xhfyhzh!}</XHF_YHZH>
+    <GHFMC>${ghfmc!}</GHFMC>
+    <GHF_NSRSBH>${ghfnsrsbh!}</GHF_NSRSBH>
+    <GHF_SF/> 
+    <GHF_DZ>${ghfdz!}</GHF_DZ>
+    <GHF_GDDH/>
+    <GHF_SJ>${ghfsj!}</GHF_SJ>
+    <GHF_EMAIL>${ghfemail!} </GHF_EMAIL>
+    <GHFQYLX>${ghfqylx!} </GHFQYLX>
+    <GHF_YHZH>${ghfyhzh!}</GHF_YHZH>
+    <HY_DM/>
+    <HY_MC/>
+    <KPY>${kpy!}</KPY>
+    <SKY>${sky!}</SKY>
+    <FHR>${fhr!}</FHR>
+    <KPRQ/>
+    <KPLX>${kplx!}</KPLX>
+    <YFP_DM>${fpdm!}</YFP_DM>
+    <YFP_HM>${fphm!}</YFP_HM>
+    <CZDM>${czdm!}</CZDM>
+    <QD_BZ>0</QD_BZ>
+	<QDXMMC></QDXMMC>
+    <CHYY/>
+    <TSCHBZ>${tschbz!}</TSCHBZ>
+    <KPHJJE>${kphjje!}</KPHJJE>
+    <HJBHSJE>${hjbhsje!}</HJBHSJE>
+    <HJSE>${hjse!}</HJSE>
+    <BZ>${bz!}</BZ>
+    <BYZD1/>
+    <BYZD2/>
+    <BYZD3/>
+    <BYZD4/>
+    <BYZD5/>
+  </FPKJXX_FPTXX>
+  <FPKJXX_XMXXS size="1" class="FPKJXX_XMXX;">
+    <FPKJXX_XMXX>
+      <XMMC>${xmmc!}</XMMC>
+      <XMDW></XMDW>
+      <GGXH></GGXH>
+      <XMSL>${xmsl!}</XMSL>
+      <HSBZ>${hsbz!}</HSBZ>
+      <XMDJ>${xmdj!}</XMDJ>
+      <FPHXZ>0</FPHXZ>
+	  <SPBM>${spbm!}</SPBM> 
+	  <ZXBM></ZXBM>
+	  <YHZCBS>0</YHZCBS>
+	  <LSLBS></LSLBS>
+	  <ZZSTSGL></ZZSTSGL>
+      <XMJE>${xmje!}</XMJE>
+      <SL>${sl!}</SL>
+      <SE>${se!}</SE>
+      <BYZD1/>
+      <BYZD2/>
+      <BYZD3/>
+      <BYZD4/>
+      <BYZD5/>
+    </FPKJXX_XMXX>
+  </FPKJXX_XMXXS>
+  <FPKJXX_DDXX class="FPKJXX_DDXX">
+    <DDH>${ddh!}</DDH>
+    <THDH/>
+    <DDDATE/>
+  </FPKJXX_DDXX>
+  <FPKJXX_DDMXXXS size="0" class="FPKJXX_DDMXXX;"/>
+  <FPKJXX_ZFXX class="FPKJXX_ZFXX"/>
+  <FPKJXX_WLXX class="FPKJXX_WLXX"/>
+</REQUEST_FPKJXX>

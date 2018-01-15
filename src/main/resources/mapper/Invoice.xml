@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="Invoice">  
+
+ <resultMap id="AuthResultMap" type="com.jst.invoice.bean.InvoiceAuth" >
+    <id column="app_id" property="appId" jdbcType="VARCHAR" />
+    <result column="app_key" property="appKey" jdbcType="VARCHAR" />
+    <result column="app_name" property="appName" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <resultMap id="InvoiceResultMap" type="com.jst.invoice.bean.Invoice" >
+    <id column="fpqqlsh" property="fpqqlsh" jdbcType="VARCHAR" />
+    <result column="kpqd" property="kpqd" jdbcType="VARCHAR" />
+    <result column="dsptbm" property="dsptbm" jdbcType="VARCHAR" />
+    <result column="nsrsbh" property="nsrsbh" jdbcType="VARCHAR" />
+    <result column="nsrmc" property="nsrmc" jdbcType="VARCHAR" />
+    <result column="nsrdzdah" property="nsrdzdah" jdbcType="VARCHAR" />
+    <result column="swjg_dm" property="swjgdm" jdbcType="VARCHAR" />
+    <result column="dkbz" property="dkbz" jdbcType="VARCHAR" />
+    <result column="kpxm" property="kpxm" jdbcType="VARCHAR" />
+    <result column="xhf_nsrsbh" property="xhfnsrsbh" jdbcType="VARCHAR" />
+    <result column="ddh" property="ddh" jdbcType="VARCHAR" />
+    <result column="xhfmc" property="xhfmc" jdbcType="VARCHAR" />
+    <result column="thf_yhzh" property="thfyhzh" jdbcType="VARCHAR" />
+    <result column="ghfmc" property="ghfmc" jdbcType="VARCHAR" />
+    <result column="ghf_sj" property="ghfsj" jdbcType="VARCHAR" />
+    <result column="ghf_email" property="ghfemail" jdbcType="VARCHAR" />
+    <result column="ghfqylx" property="ghfqylx" jdbcType="VARCHAR" />
+    <result column="kpy" property="kpy" jdbcType="VARCHAR" />
+    <result column="kplx" property="kplx" jdbcType="VARCHAR"/>
+    <result column="tschbz" property="tschbz" jdbcType="VARCHAR"/>
+    <result column="czdm" property="czdm" jdbcType="VARCHAR" />
+    <result column="qd_bz" property="qdbz" jdbcType="VARCHAR" />
+    <result column="qdxmmc" property="qdxmmc" jdbcType="VARCHAR" />
+    <result column="kphjje" property="kphjje" jdbcType="DOUBLE" />
+    <result column="hjbhsje" property="hjbhsje" jdbcType="DOUBLE" />
+    <result column="hjse" property="hjse" jdbcType="DOUBLE" />
+    <result column="fp_dm" property="fpdm" jdbcType="VARCHAR" />
+    <result column="fp_hm" property="fphm" jdbcType="VARCHAR" />
+    <result column="sl" property="sl" jdbcType="VARCHAR" />
+    <result column="xmmc" property="xmmc" jdbcType="VARCHAR" />
+    <result column="xmdj" property="xmdj" jdbcType="DOUBLE" />
+    <result column="fphxz" property="fphxz" jdbcType="VARCHAR" />
+    <result column="xmsl" property="xmsl" jdbcType="DOUBLE" />
+    <result column="spbm" property="spbm" jdbcType="VARCHAR" />   
+    <result column="hsbz" property="hsbz" jdbcType="VARCHAR" /> 
+    <result column="pdfurl" property="pdfurl" jdbcType="VARCHAR" /> 
+    <result column="status" property="status" jdbcType="VARCHAR" /> 
+  </resultMap>
+  
+  <sql id="Invoice_Column_List" >
+    fpqqlsh, kpqd, dsptbm,nsrsbh,nsrmc,nsrdzdah,swjg_dm,dkbz,kpxm,xhf_nsrsbh,ddh,xhfmc,thf_yhzh,ghfmc,ghf_sj,ghf_email,
+    ghfqylx,kpy,kplx,tschbz,czdm,qd_bz,qdxmmc,kphjje,hjbhsje,hjse,fp_dm,fp_hm,sl,xmmc,xmdj,fphxz,xmsl,spbm,hsbz,pdfurl,status
+  </sql>
+  
+  <sql id="Auth_Column_List" >
+    app_id, app_key, app_name
+  </sql>
+  <select id="selectKey" resultMap="AuthResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Auth_Column_List" />
+    from t_invoice_auth
+    where app_id = #{appId,jdbcType=VARCHAR}
+  </select>
+  
+   <insert id="insert" parameterType="com.jst.invoice.bean.Invoice" >
+    insert into t_invoice_detail (fpqqlsh, kpqd, dsptbm,nsrsbh,nsrmc,
+    nsrdzdah,dkbz,kpxm,xhf_nsrsbh,xhfmc,xhf_dz,xhf_dh,ghfmc,ghf_sj,
+    ghf_email,ghfqylx,kpy,kplx,tschbz,czdm,qd_bz,kphjje,hjbhsje,hjse,fp_dm,fp_hm,
+    status,pdfurl,ddh,sl,xmmc,xmdj,fphxz,xmsl,spbm,hsbz,create_time,app_id)
+    values (#{fpqqlsh,jdbcType=VARCHAR},#{kpqd,jdbcType=VARCHAR}, 
+     #{dsptbm,jdbcType=VARCHAR},#{nsrsbh,jdbcType=VARCHAR},#{nsrmc,jdbcType=VARCHAR},#{nsrdzdah,jdbcType=VARCHAR},
+     #{dkbz,jdbcType=VARCHAR},#{kpxm,jdbcType=VARCHAR},#{xhfnsrsbh,jdbcType=VARCHAR},
+     #{xhfmc,jdbcType=VARCHAR},#{xhfdz,jdbcType=VARCHAR},#{xhfdh,jdbcType=VARCHAR},
+     #{ghfmc,jdbcType=VARCHAR}, #{ghfsj,jdbcType=VARCHAR},#{ghfemail,jdbcType=VARCHAR},#{ghfqylx,jdbcType=VARCHAR},
+     #{kpy,jdbcType=VARCHAR},#{kplx,jdbcType=VARCHAR},#{tschbz,jdbcType=VARCHAR},#{czdm,jdbcType=VARCHAR},
+     #{qdbz,jdbcType=VARCHAR},#{kphjje,jdbcType=DOUBLE},
+     #{hjbhsje,jdbcType=DOUBLE},#{hjse,jdbcType=DOUBLE},#{fpdm,jdbcType=VARCHAR}, #{fphm,jdbcType=VARCHAR},
+     #{status,jdbcType=VARCHAR},#{pdfurl,jdbcType=VARCHAR},#{ddh,jdbcType=VARCHAR},#{sl,jdbcType=VARCHAR},
+     #{xmmc,jdbcType=VARCHAR},#{xmdj,jdbcType=DOUBLE},#{fphxz,jdbcType=VARCHAR},#{xmsl,jdbcType=DOUBLE},#{spbm,jdbcType=VARCHAR},
+     #{hsbz,jdbcType=VARCHAR},#{createTime,jdbcType=VARCHAR},#{appId,jdbcType=VARCHAR}
+     )
+  </insert>
+   <update id="updateInvoice" parameterType="com.jst.invoice.bean.Invoice" >
+   update t_invoice_detail  
+   set
+       fp_dm = #{fpdm,jdbcType=VARCHAR},
+       fp_hm =#{fphm,jdbcType=VARCHAR},
+       pdfurl=#{pdfurl,jdbcType=VARCHAR},
+       status=#{status,jdbcType=VARCHAR},
+       update_time=#{updateTime,jdbcType=VARCHAR}
+    where 
+       fpqqlsh=#{fpqqlsh,jdbcType=VARCHAR}
+  </update>
+    <select id="selectInvoiceById" resultMap="InvoiceResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Invoice_Column_List" />
+    from t_invoice_detail
+    where fpqqlsh = #{flowNo,jdbcType=VARCHAR}
+    </select>
+    <select id="selectDetailByddh" resultType="java.lang.Integer" parameterType="java.lang.String" >
+    select 
+      count(1)
+    from t_invoice_detail
+    where ddh = #{ddh,jdbcType=VARCHAR}
+  </select>
+   <select id="selectDetailByFlowno" resultType="java.lang.Integer" parameterType="java.lang.String" >
+    select 
+    count(1)
+    from t_invoice_detail
+    where fpqqlsh = #{flowNo,jdbcType=VARCHAR}
+    </select>
+</mapper>

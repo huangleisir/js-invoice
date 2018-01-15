@@ -1,0 +1,41 @@
+<<<<<<< HEAD
+*.class
+.svn/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.cfg
+
+# Eclipse project files
+.project
+.classpath
+.settings
+bin/
+target/
+/target/
+
+#log
+logs/
+/logs/
+springboot-tomcat/
+=======
+*.class
+.svn/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.cfg
+
+# Eclipse project files
+.project
+.classpath
+.settings
+bin/
+target/
+/target/
+
+>>>>>>> 6240bbda06c8a01d2436a6312584d1522b03590e
